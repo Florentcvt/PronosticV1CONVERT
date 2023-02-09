@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "PronosticV1",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

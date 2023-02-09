@@ -1,0 +1,7 @@
+{
+  "name": "PronosticV1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
