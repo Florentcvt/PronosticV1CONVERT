@@ -32,7 +32,7 @@ const Tab3: React.FC = () => {
         </IonHeader>
         
         <form>
-        <IonImg src="logo.png"   className='logo' ></IonImg>
+        <center><IonImg src="logo2.png"   className='logo' ></IonImg></center>
 {/* //////////////////////////////////////// */}
         <IonGrid fixed={true}>
       <IonRow>

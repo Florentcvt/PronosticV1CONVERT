@@ -41,41 +41,32 @@ const Tab2: React.FC = () => {
       
        /////////////////////////////////////////////////////////////////// */}
         <IonList>
-        <IonItem>
-        <IonSelect placeholder="Veuillez selectionnez votre sport">
-          <IonSelectOption value="apples">Foot</IonSelectOption>
-        </IonSelect>
-      </IonItem>
-      <IonItem>
-        <IonSelect placeholder="Veuillez selectionnez votre compétition">
-          <IonSelectOption value="apples">Ligue 1</IonSelectOption>
-          <IonSelectOption value="apples">Ligue 2</IonSelectOption>
-        </IonSelect>
-      </IonItem>   
-      <IonItem>
-        <IonSelect placeholder="Veuillez selectionnez votre match">
-          <IonSelectOption value="apples">PSG - OM</IonSelectOption>
-          <IonSelectOption value="apples">Arsenal - ManchesterUnited</IonSelectOption>
-        </IonSelect>
-      </IonItem>  
-      <IonItem>
-        <IonSelect placeholder="Veuillez selectionnez votre type de paris">
-          <IonSelectOption value="apples">Victoire - PSG</IonSelectOption>
-          <IonSelectOption value="apples">Victoire - OM</IonSelectOption>
-          <IonSelectOption value="apples">Defaite - PSG</IonSelectOption>
-          <IonSelectOption value="apples">Defaite - OM</IonSelectOption>
-        </IonSelect>
-      </IonItem>  
+      
 
       <IonItem>
-        <IonLabel>Pronostic</IonLabel>
-        <IonInput placeholder="Veuillez saisir votre Pronostic"></IonInput>
+        <IonLabel>Sport</IonLabel>
+        <IonInput placeholder="Veuillez entrer votre sport"></IonInput>
+      </IonItem>
+
+      <IonItem>
+        <IonLabel>Compétition</IonLabel>
+        <IonInput placeholder="Veuillez entrer votre compétition"></IonInput>
+      </IonItem>
+
+      <IonItem>
+        <IonLabel>Match</IonLabel>
+        <IonInput placeholder="Veuillez entrer le match"></IonInput>
+      </IonItem>
+
+      <IonItem>
+        <IonLabel>Paris</IonLabel>
+        <IonInput placeholder="Veuillez entrer un type de paris"></IonInput>
       </IonItem>
 
     </IonList>
     {/* ///////////////////////////////////////////////////////////////////// */}
-        <center><IonButton color="success">Valider</IonButton>
-        <IonButton color="danger">Supprimer</IonButton></center>
+        <center><IonButton color="success">Créer</IonButton>
+        <IonButton color="danger">Effacer</IonButton></center>
         
         </form>
         
