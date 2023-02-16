@@ -1,25 +1,48 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import { IonButton, IonContent, IonInput, IonItem, IonLabel } from '@ionic/react';
+import React, { useState } from 'react'
+import { Redirect } from 'react-router';
 
-const Tab1: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
-      </IonContent>
-    </IonPage>
-  );
-};
+export default function Login() {
 
-export default Tab1;
+    let [isAuth, setAuth] = useState(false);
+
+    const login = (e: any) => {
+        e.preventDefault()
+        let data = getFormData(e.target)
+        console.log("data", data);
+        if (data.pwd === "ioupi") {
+            setAuth(true);
+        }
+    }
+
+    return (
+        <>
+            {!isAuth && <IonContent>
+                <form onSubmit={login}>
+                    <IonItem>
+                        <IonLabel >Email:</IonLabel>
+                        <IonInput name='email' />
+                    </IonItem>
+                    <IonItem>
+                        <IonLabel >Password:</IonLabel>
+                        <IonInput name='pwd' />
+                    </IonItem>
+                    <IonButton type='submit'>Login</IonButton>
+                </form>
+            </IonContent>
+            }
+            {isAuth && <Redirect to={"/main"} />}
+        </>
+    )
+}
+function getFormData(form: any) {
+    let data = form.querySelectorAll("[name]")
+    data = [...data]
+    data = data.map((d: any) => {
+        const res: any = {}
+        res[d.name] = d.value
+        return res
+    })
+    data = Object.assign({}, ...data)
+    return data
+}
