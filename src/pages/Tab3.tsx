@@ -2,14 +2,19 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid,IonRow } 
 
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
-import React from 'react';
+import React, { useState } from 'react';
+
+
 import { IonButton } from '@ionic/react';
 import { IonImg } from '@ionic/react';
 import { IonAvatar } from '@ionic/react';
-import { IonInput, IonItem, IonLabel, IonList, IonAccordion, IonAccordionGroup, IonSelect, IonSelectOption, IonCol, } from '@ionic/react';
+import { IonInput, IonItem, IonLabel, IonList, IonAccordion, IonAccordionGroup, IonSelect, IonSelectOption, IonCol, IonAlert } from '@ionic/react';
+
 
 
 const Tab3: React.FC = () => {
+  /*function Example() {
+  const [showAlert, setShowAlert] = useState(false);*/
   return (
     <IonPage>
       <IonHeader>
@@ -21,6 +26,8 @@ const Tab3: React.FC = () => {
       </IonAvatar></IonRow></IonGrid>
         </IonToolbar>
       </IonHeader>
+
+       
 
 {/* ////////////////////////////////////////////////////////////////////////////// */}
 
@@ -99,12 +106,33 @@ const Tab3: React.FC = () => {
     </IonGrid>
 
     <center><IonButton color="tertiary">Afficher point paris</IonButton></center>
+
+
+  
+
+    {/*<IonButton onClick={() => setShowAlert(true)}>Click Me</IonButton>
+      <IonAlert
+        isOpen={showAlert}
+        onDidDismiss={() => setShowAlert(false)}
+        header="Alert"
+        subHeader="Important message"
+        message="This is an alert!"
+        buttons={['OK']}
+  />*/}
+      
+    
         </form>
         
 
       </IonContent>
+      
     </IonPage>
+
   );
+
+
+
 };
+
 
 export default Tab3;
